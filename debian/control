@@ -1,0 +1,67 @@
+Source: libsidplayfp
+Section: sound
+Priority: optional
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Standards-Version: 4.5.1
+Build-Depends: debhelper-compat (= 13), doxygen, pkg-config, libgcrypt20-dev, libftdi1-dev
+Homepage: https://sourceforge.net/p/sidplay-residfp/wiki/Home/
+
+Package: libsidplayfp6
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Suggests: sidplayfp
+Description: Library to play Commodore 64 music based on libsidplay2
+ libsidplayfp (and its console frontend sidplayfp) is a fork of sidplay2 born
+ with the aim to improve the quality of emulating the 6581, 8580 chips and the
+ surrounding C64 system in order to play SID music better.
+
+Package: libstilview0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libsidplayfp6 (<< 2.1.2-2), libsidplayfp3, libsidplayfp4, libsidplayfp5
+Replaces: libsidplayfp6 (<< 2.1.2-2), libsidplayfp3, libsidplayfp4, libsidplayfp5
+Multi-Arch: same
+Suggests: stilview
+Description: Library to display STIL information on Commodore 64 music
+ SID Tune Information List (STIL) display client library for Commodore 64
+ music files.
+
+Package: libsidplayfp-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libsidplayfp6 (= ${binary:Version})
+Multi-Arch: same
+Description: library to play Commodore 64 music based on libsidplay2 (development files)
+ libsidplayfp (and its console frontend sidplayfp) is a fork of sidplay2 born
+ with the aim to improve the quality of emulating the 6581, 8580 chips and the
+ surrounding C64 system in order to play SID music better.
+ .
+ This package contains libsidplayfp static library and header files.
+
+Package: libstilview-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libstilview0 (= ${binary:Version})
+Breaks: libsidplayfp-dev (<< 2.1.2-2)
+Replaces: libsidplayfp-dev (<< 2.1.2-2)
+Multi-Arch: same
+Description: Library to display STIL information on Commodore 64 music (development files)
+ SID Tune Information List (STIL) display client library for Commodore 64
+ music files.
+ .
+ This package contains libstilview static library and header files.
+
+Package: libsidplayfp-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, libjs-jquery
+Suggests: libsidplayfp-dev
+Description: library to play Commodore 64 music based on libsidplay2  (documentation)
+ libsidplayfp (and its console frontend sidplayfp) is a fork of sidplay2 born
+ with the aim to improve the quality of emulating the 6581, 8580 chips and the
+ surrounding C64 system in order to play SID music better.
+ .
+ This package contains the documentation for libsidplayfp.

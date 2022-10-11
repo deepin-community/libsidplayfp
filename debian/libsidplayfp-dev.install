@@ -1,0 +1,4 @@
+usr/include/sidplayfp/
+usr/lib/*/libsidplayfp*.so
+usr/lib/*/libsidplayfp*.a
+usr/lib/*/pkgconfig/libsidplayfp.pc

@@ -1,0 +1,4 @@
+version=4
+opts=uversionmangle=s/(\d)[_\.\-\+]?((RC|rc|pre|dev|beta|alpha|b|a)[\-\.]?\d*)$/$1~$2/,\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.?\d+)?$//
+http://qa.debian.org/watch/sf.php/sidplay-residfp/libsidplayfp-(\d\S*)@ARCHIVE_EXT@
